@@ -25,7 +25,7 @@ export function Header({ darkMode, onToggleDarkMode, onClearChat, onToggleSideba
             <Menu className="w-4 h-4" />
           </Button>
           <div className="hidden sm:block">
-            <h1 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <h1 className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-gray-700'}`}>
               AI Assistant
             </h1>
             <p className={`text-sm ${darkMode ? 'text-white' : 'text-green-500'}`}>
