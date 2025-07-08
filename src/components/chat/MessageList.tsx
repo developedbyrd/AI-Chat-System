@@ -2,7 +2,6 @@ import { useRef, useEffect } from 'react';
 import { Message } from '@/types/chat';
 import { MessageBubble } from './MessageBubble';
 import { TypingIndicator } from './TypingIndicator';
-import { Button } from '@/components/ui/Button';
 import { MessageSquare } from 'lucide-react';
 
 interface MessageListProps {
@@ -25,7 +24,7 @@ function WelcomeScreen() {
         Start a conversation
       </h3>
       <p className="text-gray-500 dark:text-gray-400 text-lg">
-        Ask me anything and I'll be happy to help!
+        Ask me anything and {"I'll"} be happy to help!
       </p>
     </div>
   );

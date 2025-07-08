@@ -16,7 +16,7 @@ export async function GET() {
     }), {
       headers: { 'Content-Type': 'application/json' }
     });
-  } catch (error) {
+  } catch {
     return new Response(JSON.stringify({ error: 'Failed to load chat history' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }

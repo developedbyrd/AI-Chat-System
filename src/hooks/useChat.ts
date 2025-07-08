@@ -193,7 +193,7 @@ import { Message, ChatConversation } from '@/types/chat';
 import axios from 'axios';
 
 const chatService = {
-  async sendMessage(message: string, _conversationId: string): Promise<Message> {
+  async sendMessage(message: string): Promise<Message> {
     try {
       const response = await axios.post(
         'https://openrouter.ai/api/v1/chat/completions',
