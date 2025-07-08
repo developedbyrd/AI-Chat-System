@@ -1,6 +1,6 @@
 export async function POST(request: Request) {
   try {
-    const { message, conversationId } = await request.json();
+    const { message } = await request.json();
     
     // Simulate AI processing time
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
@@ -32,7 +32,7 @@ export async function POST(request: Request) {
     return new Response(JSON.stringify(aiMessage), {
       headers: { 'Content-Type': 'application/json' }
     });
-  } catch (error) {
+  } catch {
     return new Response(JSON.stringify({ error: 'Failed to process message' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }
