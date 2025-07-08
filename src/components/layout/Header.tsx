@@ -28,8 +28,8 @@ export function Header({ darkMode, onToggleDarkMode, onClearChat, onToggleSideba
             <h1 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
               AI Assistant
             </h1>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              Powered by advanced AI • Online
+            <p className={`text-sm ${darkMode ? 'text-white' : 'text-green-500'}`}>
+              • Online
             </p>
           </div>
         </div>
