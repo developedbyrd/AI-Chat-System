@@ -42,7 +42,7 @@ export function MessageInput({
             onClick={onSendMessage}
             disabled={!inputMessage.trim() || isLoading}
             className={`rounded-lg ${darkMode ? 'bg-white text-black' : 'bg-zinc-900 text-white'} p-3 shadow-lg hover:shadow-xl transform transition-all duration-200 cursor-pointer`}
-            size="md"
+            size="lg"
           >
             {isLoading ? (
               <Loader2 className="w-6 h-6 animate-spin" />
