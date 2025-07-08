@@ -12,11 +12,11 @@ interface MessageInputProps {
   darkMode: boolean
 }
 
-export function MessageInput({ 
-  inputMessage, 
-  isLoading, 
-  onInputChange, 
-  onSendMessage, 
+export function MessageInput({
+  inputMessage,
+  isLoading,
+  onInputChange,
+  onSendMessage,
   onKeyPress,
   sidebarOpen,
   darkMode
@@ -24,14 +24,14 @@ export function MessageInput({
   return (
     <div className="fixed bottom-0 left-0 right-0 p-4 backdrop-blur-md bg-white/10 border-t border-white/20">
       <div className="max-w-4xl mx-auto">
-        <div className="flex items-center space-x-4">
+        <div className={`flex items-center space-x-4 ${darkMode ? 'text-white' : 'text-black'} placeholder-gray-500 text-base transition-all duration-100 ${sidebarOpen ? 'ml-40' : ''}`}>
           <div className="flex-1 relative">
             <Input
               value={inputMessage}
               onChange={(e) => onInputChange(e.target.value)}
               onKeyPress={onKeyPress}
               placeholder="Type your message here..."
-              className={`pr-20 py-6 bg-white/20 backdrop-blur-md border-white/30 rounded-2xl ${darkMode ? 'text-white' : 'text-black'} placeholder-gray-500 text-base transition-all duration-100 ${sidebarOpen ? 'ml-40' : ''} border-2 border-[#6d6d6d]`}
+              className={`pr-20 py-6 bg-white/20 backdrop-blur-md rounded-2xl border-2 border-[#6d6d6d]`}
               disabled={isLoading}
             />
             <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-xs text-gray-400 hidden sm:block">
